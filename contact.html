@@ -34,6 +34,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intl-tel-input.css">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/icons/logo-primary.png" type="image/png">
 
@@ -250,6 +252,10 @@
             min-height: 120px;
         }
 
+        /* Country Code Fixes */
+        .iti { width: 100%; }
+        .iti__country-list { z-index: 10; }
+
         .form-submit {
             display: inline-block;
             padding: 14px 40px;
@@ -269,6 +275,14 @@
             background: #0a1f17;
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(17, 62, 45, 0.2);
+        }
+
+        /* Validation Styling */
+        .form-submit:disabled {
+            background: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
         }
 
         .form-info {
@@ -507,10 +521,6 @@
 
         /* --- Responsive --- */
         @media (max-width: 900px) {
-            .connect-row {
-                grid-template-columns: 1fr 1fr;
-            }
-
             .form-split {
                 grid-template-columns: 1fr;
             }
@@ -525,10 +535,6 @@
         @media (max-width: 600px) {
             .contact-hero {
                 min-height: 45vh;
-            }
-
-            .connect-row {
-                grid-template-columns: 1fr;
             }
 
             .form-main {
@@ -624,7 +630,6 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            /* Prevent background scroll interaction */
             background-color: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(4px);
             display: flex;
@@ -640,12 +645,10 @@
             visibility: visible;
         }
 
-        /* Modal Header Refresh */
         .terms-modal-content {
             background-color: #fefefe;
             margin: auto;
             padding: 0;
-            /* Removed padding for full-width header */
             border: none;
             width: 90%;
             max-width: 700px;
@@ -656,12 +659,10 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            /* For header radius */
         }
 
         .terms-modal-header {
             background-color: #0a1f17;
-            /* Dark Green/Black Bar */
             padding: 20px 30px;
             display: flex;
             justify-content: space-between;
@@ -672,7 +673,6 @@
 
         .terms-modal-header h2 {
             color: #fff;
-            /* White Text */
             margin: 0;
             font-size: 20px;
             font-weight: 600;
@@ -685,14 +685,12 @@
 
         .terms-modal-close {
             color: #FDB913;
-            /* Yellow Cross */
             font-size: 32px;
             font-weight: 700;
             cursor: pointer;
             line-height: 0.8;
             transition: transform 0.3s ease;
             position: static;
-            /* Reset absolute positioning */
         }
 
         .terms-modal-close:hover,
@@ -705,13 +703,11 @@
         .terms-body {
             overflow-y: auto;
             padding: 30px;
-            /* Restored padding for body */
             font-size: 14px;
             color: #4a5568;
             line-height: 1.6;
         }
 
-        /* Remove old H2 inside body rules if any conflict */
         .terms-body h2 {
             display: none;
         }
@@ -747,13 +743,10 @@
             -webkit-appearance: none;
             width: 20px;
             min-width: 20px;
-            /* Prevent squishing */
             height: 20px;
             min-height: 20px;
             border: 2px solid #113e2d;
-            /* Green Border */
             border-radius: 2px;
-            /* Sharper corners for "perfectly square" look */
             background-color: #fff;
             position: relative;
             cursor: pointer;
@@ -769,14 +762,12 @@
             transform: scale(0);
             transition: 120ms transform ease-in-out;
             box-shadow: inset 1em 1em #FDB913;
-            /* Yellow Tick Color */
             transform-origin: center;
             clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
         }
 
         .checkbox-group input[type="checkbox"]:checked {
             background-color: #113e2d;
-            /* Green Background when checked */
             border-color: #113e2d;
         }
 
@@ -891,7 +882,7 @@
                         <p>Fill out the form below for wholesale pricing, FCL export inquiries, or private label
                             manufacturing. Our team responds within 24 hours.</p>
 
-                        <form action="https://api.web3forms.com/submit" method="POST">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                             <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                             <input type="hidden" name="subject" value="New B2B Urad Dal Inquiry — Sahaj Agro">
 
@@ -914,8 +905,8 @@
                                         required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="cf-phone">Phone / WhatsApp</label>
-                                    <input type="tel" id="cf-phone" name="phone" placeholder="+91 xxxxxxxxxx">
+                                    <label for="cf-phone">Phone / WhatsApp *</label>
+                                    <input type="tel" id="cf-phone" name="phone" required>
                                 </div>
                             </div>
 
@@ -946,7 +937,7 @@
                                         Service</a></label>
                             </div>
 
-                            <button type="submit" class="form-submit">Submit Inquiry →</button>
+                            <button type="submit" class="form-submit" id="submitBtn" disabled>Submit Inquiry →</button>
                         </form>
                     </div>
 
@@ -1202,12 +1193,11 @@
         </div>
     </footer>
 
-    <!-- Terms Modal -->
     <div id="termsModal" class="terms-modal" style="display: none;">
         <div class="terms-modal-content">
             <div class="terms-modal-header">
                 <h2>Terms of Service</h2>
-                <span class="terms-modal-close">&times;</span>
+                <span class="terms-modal-close">×</span>
             </div>
             <div class="terms-body">
                 <p>Welcome to Sahaj Agro Industries. By accessing or using our website, services, or products, you agree
@@ -1266,11 +1256,41 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intl-tel-input.min.js"></script>
     <script src="scripts.js" defer></script>
 
-
-
     <script>
+        // Initialize Phone Country Code Dropdown
+        const phoneInput = document.querySelector("#cf-phone");
+        const iti = window.intlTelInput(phoneInput, {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/utils.js",
+        });
+
+        // Strict Form Validation Logic
+        const form = document.getElementById('contactForm');
+        const emailInput = document.getElementById('cf-email');
+        const termsCheckbox = document.getElementById('termsCheckbox');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function validateForm() {
+            const isPhoneValid = phoneInput.value.trim() !== "";
+            const isEmailValid = emailInput.value.trim() !== "" && emailInput.checkValidity();
+            const isTermsAccepted = termsCheckbox.checked;
+
+            if (isPhoneValid && isEmailValid && isTermsAccepted) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+
+        // Event Listeners for Validation
+        phoneInput.addEventListener('input', validateForm);
+        emailInput.addEventListener('input', validateForm);
+        termsCheckbox.addEventListener('change', validateForm);
+
         // Terms Modal Logic
         document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById('termsModal');
@@ -1280,12 +1300,11 @@
             if (btn && modal) {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    modal.style.display = 'flex'; // Ensure flex layout
-                    // Small timeout to allow display change before transition
+                    modal.style.display = 'flex';
                     requestAnimationFrame(() => {
                         modal.classList.add('show');
                     });
-                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    document.body.style.overflow = 'hidden';
                 });
             }
 
@@ -1295,7 +1314,7 @@
                     setTimeout(() => {
                         modal.style.display = 'none';
                         document.body.style.overflow = '';
-                    }, 300); // Match CSS transition
+                    }, 300);
                 }
             };
 
@@ -1310,14 +1329,12 @@
             });
         });
 
-        // Navbar Logic - Mobile & Desktop
+        // Navbar Logic
         const navbar = document.getElementById('navbar');
         const menuToggle = document.querySelector('.menu-toggle');
-        const menuClose = document.querySelector('.menu-close');
         const navMenu = document.querySelector('.nav-menu');
         const navLinks = document.querySelectorAll('.nav-link');
 
-        // Menu Toggle Handler (fixes mobile hamburger menu)
         if (menuToggle && navMenu) {
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
@@ -1325,13 +1342,13 @@
             });
         }
 
-        // Close menu when clicking a nav link (mobile)
         navLinks.forEach(link => {
-            link.addEventListener('click', () => navMenu.classList.remove('active'));
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
         });
 
-
-        // Scroll Handler - CSS filter handles logo appearance
         window.addEventListener('scroll', () => {
             const logo = document.getElementById('navbar-logo');
             if (window.scrollY > 50) {
@@ -1420,9 +1437,5 @@
       ]
     }
     </script>
-
 </body>
-
-
 </html>
-
