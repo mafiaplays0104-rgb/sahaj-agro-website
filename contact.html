@@ -34,7 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intl-tel-input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/css/intlTelInput.css">
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/icons/logo-primary.png" type="image/png">
@@ -44,7 +44,7 @@
 
     <style>
         /* ================================================ */
-        /* CONTACT PAGE — ALL UNIQUE SECTION STYLES          */
+        /* CONTACT PAGE — ALL UNIQUE SECTION STYLES         */
         /* ================================================ */
 
         /* --- HERO: Premium Impact (Image + Overlay) --- */
@@ -67,7 +67,6 @@
             object-fit: cover;
             opacity: 0.4;
             transform: scale(1.05);
-            /* Slight zoom for effect */
         }
 
         .hero-overlay {
@@ -83,7 +82,6 @@
             max-width: 800px;
             padding: 0 24px;
             text-align: center;
-            /* Enforce center alignment */
         }
 
         .contact-hero .hero-title {
@@ -98,7 +96,6 @@
         .contact-hero .hero-title span {
             color: #FDB913;
             display: block;
-            /* Stack on mobile, inline-block on large if needed */
         }
 
         .contact-hero .hero-subtitle {
@@ -252,9 +249,32 @@
             min-height: 120px;
         }
 
-        /* Country Code Fixes */
-        .iti { width: 100%; }
-        .iti__country-list { z-index: 10; }
+        /* --- Custom CSS for Phone Dropdown --- */
+        .iti {
+            width: 100%;
+            display: block;
+        }
+        .iti__country-list {
+            background-color: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #2d3748;
+            z-index: 99;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        /* Ensure input has space for the dropdown flag */
+        .iti--allow-dropdown input, 
+        .iti--allow-dropdown input[type=text], 
+        .iti--allow-dropdown input[type=tel], 
+        .iti--separate-dial-code input, 
+        .iti--separate-dial-code input[type=text], 
+        .iti--separate-dial-code input[type=tel] {
+            padding-right: 16px;
+            padding-left: 90px !important;
+            margin-left: 0;
+        }
 
         .form-submit {
             display: inline-block;
@@ -271,15 +291,16 @@
             margin-top: 8px;
         }
 
-        .form-submit:hover {
+        .form-submit:hover:not(:disabled) {
             background: #0a1f17;
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(17, 62, 45, 0.2);
         }
 
-        /* Validation Styling */
+        /* Disabled State for Submit Button */
         .form-submit:disabled {
             background: #cbd5e0;
+            color: #718096;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
@@ -1256,42 +1277,49 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intl-tel-input.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/intlTelInput.min.js"></script>
+
     <script src="scripts.js" defer></script>
 
     <script>
-        // Initialize Phone Country Code Dropdown
+        // --- 1. Initialize Phone Country Code Dropdown ---
         const phoneInput = document.querySelector("#cf-phone");
         const iti = window.intlTelInput(phoneInput, {
             initialCountry: "in",
             separateDialCode: true,
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/utils.js",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/utils.js"
         });
 
-        // Strict Form Validation Logic
-        const form = document.getElementById('contactForm');
-        const emailInput = document.getElementById('cf-email');
-        const termsCheckbox = document.getElementById('termsCheckbox');
-        const submitBtn = document.getElementById('submitBtn');
+        // --- 2. Strict Form Validation Logic ---
+        const emailInput = document.querySelector("#cf-email");
+        const termsCheckbox = document.querySelector("#termsCheckbox");
+        const submitBtn = document.querySelector("#submitBtn");
 
-        function validateForm() {
-            const isPhoneValid = phoneInput.value.trim() !== "";
+        function checkFormValidity() {
+            // Check if email is filled and valid format
             const isEmailValid = emailInput.value.trim() !== "" && emailInput.checkValidity();
-            const isTermsAccepted = termsCheckbox.checked;
+            // Check if phone is filled 
+            const isPhoneValid = phoneInput.value.trim() !== "";
+            // Check if terms are agreed
+            const isTermsChecked = termsCheckbox.checked;
 
-            if (isPhoneValid && isEmailValid && isTermsAccepted) {
+            // Enable submit only if ALL three conditions are met
+            if (isEmailValid && isPhoneValid && isTermsChecked) {
                 submitBtn.disabled = false;
             } else {
                 submitBtn.disabled = true;
             }
         }
 
-        // Event Listeners for Validation
-        phoneInput.addEventListener('input', validateForm);
-        emailInput.addEventListener('input', validateForm);
-        termsCheckbox.addEventListener('change', validateForm);
+        // Listeners for Validation
+        emailInput.addEventListener("input", checkFormValidity);
+        phoneInput.addEventListener("input", checkFormValidity);
+        termsCheckbox.addEventListener("change", checkFormValidity);
+        
+        // Run once on load just in case fields are pre-filled
+        checkFormValidity();
 
-        // Terms Modal Logic
+        // --- 3. Terms Modal Logic ---
         document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById('termsModal');
             const btn = document.getElementById('openTermsModal');
@@ -1329,7 +1357,7 @@
             });
         });
 
-        // Navbar Logic
+        // --- 4. Navbar Logic ---
         const navbar = document.getElementById('navbar');
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
@@ -1360,7 +1388,7 @@
             }
         });
 
-        // FAQ Toggle
+        // --- 5. FAQ Toggle ---
         document.querySelectorAll('.faq-mini-q').forEach(q => {
             q.addEventListener('click', () => {
                 const item = q.parentElement;
@@ -1368,14 +1396,16 @@
             });
         });
 
-        // Hero Animation
-        gsap.from(".hero-content", {
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-            delay: 0.2
-        });
+        // --- 6. Hero Animation ---
+        if (typeof gsap !== 'undefined') {
+            gsap.from(".hero-content", {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: 0.2
+            });
+        }
     </script>
 
     <script type="application/ld+json">
