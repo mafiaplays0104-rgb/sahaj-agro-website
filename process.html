@@ -1,507 +1,435 @@
-<!DOCTYPE html>
-<html lang="en">
+/* process_custom.css - Standardized Styles to Match System */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urad Dal Manufacturing Process | Sortex Clean Mill Chhattisgarh</title>
-    <meta name="description"
-        content="Discover Sahaj Agro's advanced urad dal manufacturing process in Chhattisgarh. From ethical sourcing to Buhler sortex cleaning & export packaging. 99.5% purity.">
-    <meta name="keywords"
-        content="urad dal manufacturing process, sortex clean urad dal, urad dal mill chhattisgarh, hygienic dal processing, wholesale dal manufacturer, bulk dal packaging, fssai certified dal mill">
-    <meta name="author" content="Sahaj Agro Industries">
-    <link rel="canonical" href="https://www.sahajagroindustries.com/process">
+/* ================================================ */
+/* NAVBAR OVERRIDES (Standard System)              */
+/* ================================================ */
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000 !important;
+    background: transparent !important;
+    transition: background 0.3s ease, padding 0.3s ease;
+}
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.sahajagroindustries.com/process.html">
-    <meta property="og:title" content="Urad Dal Manufacturing Process | Sahaj Agro Industries">
-    <meta property="og:description"
-        content="Take a tour of our FSSAI-certified urad dal mill. Advanced sortex cleaning and hygienic processing in Chhattisgarh.">
-    <meta property="og:image" content="https://www.sahajagroindustries.com/assets/images/process-cleaning.avif">
+.navbar.scrolled {
+    background: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.sahajagroindustries.com/process.html">
-    <meta property="twitter:title" content="Urad Dal Manufacturing Process | Sahaj Agro Industries">
-    <meta property="twitter:description"
-        content="Take a tour of our FSSAI-certified urad dal mill. Advanced sortex cleaning and hygienic processing in Chhattisgarh.">
-    <meta property="twitter:image" content="https://www.sahajagroindustries.com/assets/images/process-cleaning.avif">
+.navbar.scrolled .nav-link,
+.navbar.scrolled .brand-logo .logo-mobile {
+    color: #113e2d !important;
+}
 
-    <link rel="preload" as="image" href="assets/images/process-cleaning.avif" fetchpriority="high">
+.navbar.scrolled .menu-toggle .bar {
+    background-color: #113e2d !important;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+/* ================================================ */
+/* HERO: Centered Impact (Matches Products Page)   */
+/* ================================================ */
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer_shared.css">
-    <link rel="stylesheet" href="process_custom.css">
+.page-hero-centered {
+    position: relative;
+    min-height: 100vh;
+    /* Comfortable height like contact */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0;
+    color: #fff;
+}
 
-    <link rel="icon" href="assets/icons/logo-primary.png" type="image/png">
+.hero-bg-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-</head>
+.hero-bg-full::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(17, 62, 45, 0.7), rgba(17, 62, 45, 0.5));
+    z-index: 1;
+}
 
-<body>
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+}
 
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="/" class="brand-logo" aria-label="Sahaj Agro Industries Home">
-                <img src="assets/icons/logo-white.png" alt="Sahaj Agro Logo" class="logo" id="navbar-logo">
-            </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="/products" class="nav-link">Our Products</a></li>
-                <li class="nav-item"><a href="/process" class="nav-link active">Process</a></li>
-                <li class="nav-item"><a href="/distribution" class="nav-link">Distribution</a></li>
-                <li class="nav-item"><a href="/contact" class="nav-link btn-contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+.hero-content-centered {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 0 24px;
+    margin-top: 60px;
+}
 
-    <header class="page-hero-centered">
-        <div class="hero-bg-full">
-            <img src="assets/images/process-cleaning.avif" alt="Advanced Urad Dal Mill Facility in Chhattisgarh"
-                class="hero-bg-img">
-        </div>
+.hero-eyebrow-center {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #FDB913;
+    margin-bottom: 28px;
+    opacity: 0.9;
+}
 
-        <div class="container hero-content-centered">
-            <span class="hero-eyebrow-center">The Science of Purity</span>
-            <h1 class="hero-title-center">
-                Advanced Dal Manufacturing.<br>
-                <span>Perfected in Chhattisgarh.</span>
-            </h1>
-            <p class="hero-desc-center">
-                Explore our world-class urad dal manufacturing process. Every grain passes through six rigorous
-                stages—ethically sourced, sortex cleaned, and scientifically tested to meet global export standards.
-            </p>
+.hero-title-center {
+    font-size: clamp(29px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+    color: #ffffff;
+}
 
-            <div class="hero-actions-center">
-                <a href="#journey" class="btn btn-hero-solid">View The Mill Journey</a>
-            </div>
-        </div>
-    </header>
+.hero-title-center span {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
 
-    <main>
+.hero-title-center span::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: rgba(253, 185, 19, 0.3);
+    z-index: -1;
+}
 
-        <section id="journey" class="section journey-section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="eyebrow">Export-Grade Manufacturing</span>
-                    <h2 class="section-title">Six Steps to 99.5% Purity</h2>
-                    <p class="section-subtitle">A seamless integration of traditional agricultural care and modern
-                        optical sorting technology.</p>
-                </div>
+.hero-desc-center {
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 480px;
+    margin: 0 auto 48px;
+}
 
-                <div class="journey-steps">
+.hero-actions-center {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-                    <div class="journey-row">
-                        <div class="journey-img-col">
-                            <div class="img-box">
-                                <img src="assets/images/uradmch.avif"
-                                    alt="Ethical Sourcing of raw urad dal from farmers" loading="lazy">
-                                <div class="step-badge">01</div>
-                            </div>
-                        </div>
-                        <div class="journey-text-col">
-                            <h3>Ethical Direct Sourcing</h3>
-                            <p>Our manufacturing process begins at the roots. We procure raw material directly from over
-                                200 partner farms in Chhattisgarh. By eliminating middlemen, we uphold our <a
-                                    href="about.html" class="seo-inline-link">foundational values</a>, ensuring farmers
-                                receive fair prices while we secure the freshest harvest within 48 hours of reaping.</p>
-                            <ul class="feature-list">
-                                <li>Direct farm-to-mill partnerships</li>
-                                <li>Fair trade agricultural practices</li>
-                                <li>Premium raw mapte selection</li>
-                            </ul>
-                        </div>
-                    </div>
+.btn-hero-solid {
+    background: #FDB913;
+    color: #113e2d;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+}
 
-                    <div class="journey-row reverse">
-                        <div class="journey-img-col">
-                            <div class="img-box">
-                                <img src="assets/images/process-cleaning.avif"
-                                    alt="Industrial Cleaning and Destoning of Urad Dal" loading="lazy">
-                                <div class="step-badge">02</div>
-                            </div>
-                        </div>
-                        <div class="journey-text-col">
-                            <h3>Pre-Cleaning & Destoning</h3>
-                            <p>Raw grains undergo rigorous mechanical pre-cleaning. Heavy-duty destoners, density
-                                graders, and vibrating screens meticulously separate stones, dust, mud balls, and
-                                agricultural foreign matter. Only highly cleansed raw material is permitted to enter the
-                                main milling line.</p>
-                            <ul class="feature-list">
-                                <li>Automated gravity destoning</li>
-                                <li>Industrial dust aspiration</li>
-                                <li>Agricultural debris removal</li>
-                            </ul>
-                        </div>
-                    </div>
+.btn-hero-solid:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 
-                    <div class="journey-row">
-                        <div class="journey-img-col">
-                            <div class="img-box">
-                                <img src="assets/images/2.avif" alt="Buhler Sortex Technology for Urad Dal processing"
-                                    loading="lazy">
-                                <div class="step-badge">03</div>
-                            </div>
-                        </div>
-                        <div class="journey-text-col">
-                            <h3>Optical Sortex Cleaning</h3>
-                            <p>The core of our quality lies in our optical sorting technology. High-resolution cameras
-                                analyze every single grain's color and shape. High-speed pneumatic air ejectors
-                                instantly remove any discolored, chalky, or damaged grains, guaranteeing a <a
-                                    href="/products" class="seo-inline-link">premium sortex-clean product</a>.</p>
-                            <ul class="feature-list">
-                                <li>Advanced optical color sorting</li>
-                                <li>Micro-defect rejection</li>
-                                <li>Consistent grain size grading</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="journey-row reverse">
-                        <div class="journey-img-col">
-                            <div class="img-box">
-                                <img src="assets/images/urad-split-white.avif"
-                                    alt="Hygienic Urad Dal Splitting and Milling" loading="lazy">
-                                <div class="step-badge">04</div>
-                            </div>
-                        </div>
-                        <div class="journey-text-col">
-                            <h3>Hygienic Milling & Splitting</h3>
-                            <p>For our processed varieties, the cleaned whole dal enters our specialized milling units.
-                                Using temperature-controlled emery rollers, the skin is gently removed and the grain is
-                                split without losing its natural protein and fiber, creating our signature creamy split
-                                urad dal.</p>
-                            <ul class="feature-list">
-                                <li>Temperature-controlled de-husking</li>
-                                <li>Nutrient-retaining split technology</li>
-                                <li>Byproduct separation for cattle feed</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="journey-row">
-                        <div class="journey-img-col">
-                            <div class="img-box">
-                                <img src="assets/images/process-packing.avif" alt="Export Automated Packing of Urad Dal"
-                                    loading="lazy">
-                                <div class="step-badge">05</div>
-                            </div>
-                        </div>
-                        <div class="journey-text-col">
-                            <h3>Export-Ready Automated Packing</h3>
-                            <p>The finished product is weighed and packed using fully automated systems to maintain zero
-                                human contact. We utilize heavy-duty, moisture-resistant PP and Jute packaging materials
-                                designed specifically to lock in freshness during prolonged oceanic transit.</p>
-                            <ul class="feature-list">
-                                <li>Touch-free automated bagging</li>
-                                <li>Precision weighing systems</li>
-                                <li>Moisture-proof inner lining</li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="journey-row reverse">
-                        <div class="journey-img-col">
-                            <div class="img-box">
-                                <img src="assets/images/6549e52943c26955e3fb9516_xpo logistics.avif"
-                                    alt="Global Shipping and Container Loading for Dal" loading="lazy">
-                                <div class="step-badge">06</div>
-                            </div>
-                        </div>
-                        <div class="journey-text-col">
-                            <h3>Container Loading & Dispatch</h3>
-                            <p>From our warehouse directly to your destination. We manage seamless stuffing of 20ft and
-                                40ft containers directly at our facility. Paired with complete customs and phytosanitary
-                                documentation, our <a href="/distribution" class="seo-inline-link">global dispatch
-                                    process</a> is fast and frictionless.</p>
-                            <ul class="feature-list">
-                                <li>Direct container stuffing</li>
-                                <li>Fumigation and pest control</li>
-                                <li>Complete export documentation</li>
-                            </ul>
-                        </div>
-                    </div>
+/* ================================================ */
+/* SECTION: Journey (Zig Zag standard)             */
+/* ================================================ */
 
-                </div>
-            </div>
-        </section>
+.journey-section {
+    padding: 100px 0;
+    background: #fff;
+}
 
-        <section class="section tech-section bg-light">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="eyebrow">Mill Infrastructure</span>
-                    <h2 class="section-title">Powered by Modern Technology</h2>
-                    <p class="section-subtitle">World-class food processing machinery ensuring 99.5% consistency in
-                        every bulk batch.</p>
-                </div>
+.section-header {
+    margin-bottom: 64px;
+}
 
-                <div class="standard-grid">
-                    <div class="standard-card">
-                        <div class="card-icon">⚙️</div>
-                        <h3>Optical Sorting Tech</h3>
-                        <p>High-resolution infra-red cameras detect and pneumatically remove impurities and
-                            discoloration smaller than a pinhead.</p>
-                    </div>
+.eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FDB913;
+    margin-bottom: 16px;
+    display: inline-block;
+}
 
-                    <div class="standard-card">
-                        <div class="card-icon">🌡️</div>
-                        <h3>Climate & Moisture Control</h3>
-                        <p>Automated silos and drying units maintain an optimum 10-12% moisture level to prevent fungal
-                            growth and spoilage during export.</p>
-                    </div>
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #113e2d;
+    margin-bottom: 16px;
+}
 
-                    <div class="standard-card">
-                        <div class="card-icon">🏭</div>
-                        <h3>Closed Processing System</h3>
-                        <p>Our entire milling facility operates in a dust-free, touchless environment, ensuring maximum
-                            food safety and hygiene compliance.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+.section-subtitle {
+    font-size: 16px;
+    color: #4a5568;
+}
 
-        <section class="section lab-section">
-            <div class="container">
-                <div class="split-layout">
-                    <div class="content-side">
-                        <span class="eyebrow">Export Quality Assurance</span>
-                        <h2 class="section-title">In-House Testing Laboratory</h2>
-                        <p class="lead-text">Quality isn't just checked at the end; it is scientifically monitored at
-                            every phase of milling.</p>
-                        <p>Our onsite laboratory technicians pull samples from every hour of production. We stringently
-                            verify moisture content, grain size uniformity, admixture levels, and cooking quality before
-                            any container is approved for global packaging. This ensures complete compliance with
-                            international food safety bodies.</p>
+.journey-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
 
-                        <div class="cert-links" style="margin-bottom: 2rem;">
-                            <strong>Compliant with: </strong>
-                            <a href="https://www.fssai.gov.in/" target="_blank" rel="noopener noreferrer"
-                                class="seo-inline-link">FSSAI</a> |
-                            <a href="https://www.iso.org/home.html" target="_blank" rel="noopener noreferrer"
-                                class="seo-inline-link">ISO 9001:2015</a> |
-                            <a href="https://apeda.gov.in/apedawebsite/" target="_blank" rel="noopener noreferrer"
-                                class="seo-inline-link">APEDA Export Standards</a>
-                        </div>
+.journey-row:last-child {
+    margin-bottom: 0;
+}
 
-                        <div class="stat-box-row">
-                            <div class="stat-box">
-                                <span class="stat-num">99.5%</span>
-                                <span class="stat-label">Purity Guaranteed</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-num">24/7</span>
-                                <span class="stat-label">Lab Monitoring</span>
-                            </div>
-                        </div>
+.journey-row.reverse .journey-img-col {
+    order: 2;
+}
 
-                        <a href="/products" class="btn btn-hero-border">Check Product Specifications</a>
-                    </div>
-                    <div class="image-side">
-                        <div class="img-box">
-                            <img src="assets/images/process-quality.avif"
-                                alt="Quality Assurance Lab Testing for Urad Dal" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+.journey-row.reverse .journey-text-col {
+    order: 1;
+}
 
-        <section class="final-cta-section">
-            <div class="container">
-                <h2>Source From a Facility Built on Purity</h2>
-                <p>Don't compromise on your supply chain. Partner with an Indian manufacturer that guarantees
-                    sortex-clean perfection in every container load.</p>
-                <a href="/contact" class="btn btn-primary">Contact Our Export Team →</a>
-            </div>
-        </section>
+.img-box {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
 
-    </main>
+.img-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
 
-    <footer id="contact" class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col brand-col">
-                    <img src="assets/icons/logo-white.png" alt="Sahaj Agro Industries - Urad Dal Manufacturer"
-                        class="footer-logo">
-                    <p class="footer-desc">Your trusted urad dal manufacturer in Chhattisgarh, providing premium bulk
-                        supplies and export container loads globally.</p>
-                    <div class="tagline">SIMPLY PURE, ALWAYS.</div>
-                </div>
+.step-badge {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: #113e2d;
+    color: #FDB913;
+    font-size: 20px;
+    font-weight: 700;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(17, 62, 45, 0.3);
+}
 
-                <div class="footer-col quick-links-col">
-                    <h3>Quick Links</h3>
-                    <ul class="quick-links">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/products">Our Bulk Products</a></li>
-                        <li><a href="/process">Export Process</a></li>
-                        <li><a href="/distribution">Global Distribution</a></li>
-                    </ul>
-                </div>
+.journey-row.reverse .step-badge {
+    left: auto;
+    right: 20px;
+}
 
-                <div class="footer-col contact-details-col">
-                    <h3>Get a Bulk Quote</h3>
-                    <ul class="contact-info-list">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="#FDB913" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <a href="mailto:sahajagroindustries0016@gmail.com"
-                                style="color:#fff;">sahajagroindustries0016@gmail.com</a>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                fill="none" stroke="#FDB913" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <span style="color:#fff;">Bhatapara, Chhattisgarh, India</span>
-                        </li>
-                    </ul>
+.journey-text-col h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #113e2d;
+    margin-bottom: 16px;
+}
 
-                    <div class="social-icons-row">
-                        <a href="https://wa.me/917000205906" target="_blank" class="social-icon" aria-label="WhatsApp">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@sahajagroindustries1" target="_blank" class="social-icon"
-                            aria-label="YouTube">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/sahajagroindustries/" target="_blank" class="social-icon"
-                            aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61586600987709" target="_blank"
-                            class="social-icon" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/sahaj-mourya-b5933b387/?originalSubdomain=in"
-                            target="_blank" class="social-icon" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+.journey-text-col p {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
 
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sahaj Agro Industries. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
 
-    <div id="termsModal" class="terms-modal" style="display: none;">
-        <div class="terms-modal-content">
-            <span class="terms-modal-close"
-                onclick="document.getElementById('termsModal').style.display='none'">&times;</span>
-            <h2>Terms of Service</h2>
-            <div class="terms-body">
-                <p>Welcome to Sahaj Agro Industries. By accessing or using our website, services, or products, you agree
-                    to comply with and be bound by the following Terms of Service...</p>
-            </div>
-        </div>
-    </div>
+.feature-list li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-weight: 500;
+}
 
-    <script src="process_scripts.js" defer></script>
+.feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #113e2d;
+    font-weight: 700;
+}
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://www.sahajagroindustries.com/#organization",
-          "name": "Sahaj Agro Industries",
-          "url": "https://www.sahajagroindustries.com/",
-          "logo": "https://www.sahajagroindustries.com/assets/icons/logo-primary.png",
-          "description": "Leading Urad Dal exporter in India & manufacturer in Chhattisgarh. Supplying bulk whole, split & black urad dal globally.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-7000205906",
-            "contactType": "sales",
-            "email": "sahajagroindustries0016@gmail.com",
-            "areaServed": "Worldwide",
-            "availableLanguage": ["English", "Hindi"]
-          },
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61586600987709",
-            "https://www.instagram.com/sahajagroindustries/",
-            "https://www.linkedin.com/in/sahaj-mourya-b5933b387/?originalSubdomain=in",
-            "https://www.youtube.com/@sahajagroindustries1"
-          ]
-        },
-        {
-          "@type": "WholesaleStore",
-          "@id": "https://www.sahajagroindustries.com/#localbusiness",
-          "name": "Sahaj Agro Industries - Global Export HQ",
-          "image": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bhatapara",
-            "addressRegion": "Chhattisgarh",
-            "addressCountry": "IN"
-          },
-          "telephone": "+91-7000205906",
-          "priceRange": "$$$",
-          "description": "Premium bulk urad dal manufacturer and international exporter.",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "124"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.sahajagroindustries.com/#website",
-          "url": "https://www.sahajagroindustries.com/",
-          "name": "Sahaj Agro Industries",
-          "publisher": {
-            "@id": "https://www.sahajagroindustries.com/#organization"
-          },
-          "inLanguage": "en"
-        }
-      ]
+/* ================================================ */
+/* SECTION: Tech (Standard Grid)                   */
+/* ================================================ */
+
+.tech-section {
+    padding: 100px 0;
+    background: #f5f7f3;
+    /* Light grey, standard */
+}
+
+.standard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.standard-card {
+    background: #fff;
+    padding: 40px 32px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.standard-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(17, 62, 45, 0.1);
+    border-color: #113e2d;
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.standard-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #113e2d;
+    margin-bottom: 12px;
+}
+
+.standard-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+/* ================================================ */
+/* SECTION: Lab (Split Layout)                     */
+/* ================================================ */
+
+.lab-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.stat-box-row {
+    display: flex;
+    gap: 32px;
+    margin: 32px 0;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 32px;
+    font-weight: 700;
+    color: #113e2d;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #718096;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.image-side .img-box {
+    height: 400px;
+}
+
+/* ================================================ */
+/* FINAL CTA (Standard Dark)                       */
+/* ================================================ */
+
+.final-cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #113e2d 0%, #0d2e21 100%);
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
+}
+
+.final-cta-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.final-cta-section p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+/* ================================================ */
+/* RESPONSIVE                                      */
+/* ================================================ */
+
+@media (max-width: 900px) {
+
+    .journey-row,
+    .split-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
-    </script>
-</body>
 
-</html>
+    .journey-row.reverse .journey-img-col {
+        order: unset;
+    }
+
+    .journey-row.reverse .journey-text-col {
+        order: unset;
+    }
+
+    .standard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero-centered {
+        height: 100vh !important;
+        min-height: 100vh !important;
+    }
+
+    .final-cta-section h2 {
+        font-size: 28px;
+    }
+}
