@@ -34,8 +34,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/css/intlTelInput.css">
-
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/icons/logo-primary.png" type="image/png">
 
@@ -44,7 +42,7 @@
 
     <style>
         /* ================================================ */
-        /* CONTACT PAGE — ALL UNIQUE SECTION STYLES         */
+        /* CONTACT PAGE — ALL UNIQUE SECTION STYLES          */
         /* ================================================ */
 
         /* --- HERO: Premium Impact (Image + Overlay) --- */
@@ -67,6 +65,7 @@
             object-fit: cover;
             opacity: 0.4;
             transform: scale(1.05);
+            /* Slight zoom for effect */
         }
 
         .hero-overlay {
@@ -82,6 +81,7 @@
             max-width: 800px;
             padding: 0 24px;
             text-align: center;
+            /* Enforce center alignment */
         }
 
         .contact-hero .hero-title {
@@ -96,6 +96,7 @@
         .contact-hero .hero-title span {
             color: #FDB913;
             display: block;
+            /* Stack on mobile, inline-block on large if needed */
         }
 
         .contact-hero .hero-subtitle {
@@ -249,33 +250,6 @@
             min-height: 120px;
         }
 
-        /* --- Custom CSS for Phone Dropdown --- */
-        .iti {
-            width: 100%;
-            display: block;
-        }
-        .iti__country-list {
-            background-color: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-            color: #2d3748;
-            z-index: 99;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        /* Ensure input has space for the dropdown flag */
-        .iti--allow-dropdown input, 
-        .iti--allow-dropdown input[type=text], 
-        .iti--allow-dropdown input[type=tel], 
-        .iti--separate-dial-code input, 
-        .iti--separate-dial-code input[type=text], 
-        .iti--separate-dial-code input[type=tel] {
-            padding-right: 16px;
-            padding-left: 90px !important;
-            margin-left: 0;
-        }
-
         .form-submit {
             display: inline-block;
             padding: 14px 40px;
@@ -291,19 +265,10 @@
             margin-top: 8px;
         }
 
-        .form-submit:hover:not(:disabled) {
+        .form-submit:hover {
             background: #0a1f17;
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(17, 62, 45, 0.2);
-        }
-
-        /* Disabled State for Submit Button */
-        .form-submit:disabled {
-            background: #cbd5e0;
-            color: #718096;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
         }
 
         .form-info {
@@ -542,6 +507,10 @@
 
         /* --- Responsive --- */
         @media (max-width: 900px) {
+            .connect-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .form-split {
                 grid-template-columns: 1fr;
             }
@@ -556,6 +525,10 @@
         @media (max-width: 600px) {
             .contact-hero {
                 min-height: 45vh;
+            }
+
+            .connect-row {
+                grid-template-columns: 1fr;
             }
 
             .form-main {
@@ -651,6 +624,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            /* Prevent background scroll interaction */
             background-color: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(4px);
             display: flex;
@@ -666,10 +640,12 @@
             visibility: visible;
         }
 
+        /* Modal Header Refresh */
         .terms-modal-content {
             background-color: #fefefe;
             margin: auto;
             padding: 0;
+            /* Removed padding for full-width header */
             border: none;
             width: 90%;
             max-width: 700px;
@@ -680,10 +656,12 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            /* For header radius */
         }
 
         .terms-modal-header {
             background-color: #0a1f17;
+            /* Dark Green/Black Bar */
             padding: 20px 30px;
             display: flex;
             justify-content: space-between;
@@ -694,6 +672,7 @@
 
         .terms-modal-header h2 {
             color: #fff;
+            /* White Text */
             margin: 0;
             font-size: 20px;
             font-weight: 600;
@@ -706,12 +685,14 @@
 
         .terms-modal-close {
             color: #FDB913;
+            /* Yellow Cross */
             font-size: 32px;
             font-weight: 700;
             cursor: pointer;
             line-height: 0.8;
             transition: transform 0.3s ease;
             position: static;
+            /* Reset absolute positioning */
         }
 
         .terms-modal-close:hover,
@@ -724,11 +705,13 @@
         .terms-body {
             overflow-y: auto;
             padding: 30px;
+            /* Restored padding for body */
             font-size: 14px;
             color: #4a5568;
             line-height: 1.6;
         }
 
+        /* Remove old H2 inside body rules if any conflict */
         .terms-body h2 {
             display: none;
         }
@@ -764,10 +747,13 @@
             -webkit-appearance: none;
             width: 20px;
             min-width: 20px;
+            /* Prevent squishing */
             height: 20px;
             min-height: 20px;
             border: 2px solid #113e2d;
+            /* Green Border */
             border-radius: 2px;
+            /* Sharper corners for "perfectly square" look */
             background-color: #fff;
             position: relative;
             cursor: pointer;
@@ -783,12 +769,14 @@
             transform: scale(0);
             transition: 120ms transform ease-in-out;
             box-shadow: inset 1em 1em #FDB913;
+            /* Yellow Tick Color */
             transform-origin: center;
             clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
         }
 
         .checkbox-group input[type="checkbox"]:checked {
             background-color: #113e2d;
+            /* Green Background when checked */
             border-color: #113e2d;
         }
 
@@ -903,7 +891,7 @@
                         <p>Fill out the form below for wholesale pricing, FCL export inquiries, or private label
                             manufacturing. Our team responds within 24 hours.</p>
 
-                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                        <form action="https://api.web3forms.com/submit" method="POST">
                             <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                             <input type="hidden" name="subject" value="New B2B Urad Dal Inquiry — Sahaj Agro">
 
@@ -926,8 +914,8 @@
                                         required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="cf-phone">Phone / WhatsApp *</label>
-                                    <input type="tel" id="cf-phone" name="phone" required>
+                                    <label for="cf-phone">Phone / WhatsApp</label>
+                                    <input type="tel" id="cf-phone" name="phone" placeholder="+91 xxxxxxxxxx">
                                 </div>
                             </div>
 
@@ -958,7 +946,7 @@
                                         Service</a></label>
                             </div>
 
-                            <button type="submit" class="form-submit" id="submitBtn" disabled>Submit Inquiry →</button>
+                            <button type="submit" class="form-submit">Submit Inquiry →</button>
                         </form>
                     </div>
 
@@ -1004,7 +992,19 @@
                                 <a href="mailto:sahajagroindustries0016@gmail.com">sahajagroindustries0016@gmail.com</a>
                             </div>
                         </div>
-                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Mill Business Hours</strong>
+                                <span>Mon–Sat, 9:00 AM – 6:00 PM IST</span>
+                            </div>
+                        </div>
                         <div class="social-row">
                             <a href="https://wa.me/917000205906" target="_blank" aria-label="WhatsApp Desk"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -1133,6 +1133,7 @@
                         <li><a href="/products">Our Bulk Products</a></li>
                         <li><a href="/process">Export Process</a></li>
                         <li><a href="/distribution">Global Distribution</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
                     </ul>
                 </div>
 
@@ -1214,11 +1215,12 @@
         </div>
     </footer>
 
+    <!-- Terms Modal -->
     <div id="termsModal" class="terms-modal" style="display: none;">
         <div class="terms-modal-content">
             <div class="terms-modal-header">
                 <h2>Terms of Service</h2>
-                <span class="terms-modal-close">×</span>
+                <span class="terms-modal-close">&times;</span>
             </div>
             <div class="terms-body">
                 <p>Welcome to Sahaj Agro Industries. By accessing or using our website, services, or products, you agree
@@ -1277,49 +1279,12 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/intlTelInput.min.js"></script>
-
     <script src="scripts.js" defer></script>
 
+
+
     <script>
-        // --- 1. Initialize Phone Country Code Dropdown ---
-        const phoneInput = document.querySelector("#cf-phone");
-        const iti = window.intlTelInput(phoneInput, {
-            initialCountry: "in",
-            separateDialCode: true,
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/19.2.16/js/utils.js"
-        });
-
-        // --- 2. Strict Form Validation Logic ---
-        const emailInput = document.querySelector("#cf-email");
-        const termsCheckbox = document.querySelector("#termsCheckbox");
-        const submitBtn = document.querySelector("#submitBtn");
-
-        function checkFormValidity() {
-            // Check if email is filled and valid format
-            const isEmailValid = emailInput.value.trim() !== "" && emailInput.checkValidity();
-            // Check if phone is filled 
-            const isPhoneValid = phoneInput.value.trim() !== "";
-            // Check if terms are agreed
-            const isTermsChecked = termsCheckbox.checked;
-
-            // Enable submit only if ALL three conditions are met
-            if (isEmailValid && isPhoneValid && isTermsChecked) {
-                submitBtn.disabled = false;
-            } else {
-                submitBtn.disabled = true;
-            }
-        }
-
-        // Listeners for Validation
-        emailInput.addEventListener("input", checkFormValidity);
-        phoneInput.addEventListener("input", checkFormValidity);
-        termsCheckbox.addEventListener("change", checkFormValidity);
-        
-        // Run once on load just in case fields are pre-filled
-        checkFormValidity();
-
-        // --- 3. Terms Modal Logic ---
+        // Terms Modal Logic
         document.addEventListener('DOMContentLoaded', () => {
             const modal = document.getElementById('termsModal');
             const btn = document.getElementById('openTermsModal');
@@ -1328,11 +1293,12 @@
             if (btn && modal) {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    modal.style.display = 'flex';
+                    modal.style.display = 'flex'; // Ensure flex layout
+                    // Small timeout to allow display change before transition
                     requestAnimationFrame(() => {
                         modal.classList.add('show');
                     });
-                    document.body.style.overflow = 'hidden';
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
                 });
             }
 
@@ -1342,7 +1308,7 @@
                     setTimeout(() => {
                         modal.style.display = 'none';
                         document.body.style.overflow = '';
-                    }, 300);
+                    }, 300); // Match CSS transition
                 }
             };
 
@@ -1357,12 +1323,14 @@
             });
         });
 
-        // --- 4. Navbar Logic ---
+        // Navbar Logic - Mobile & Desktop
         const navbar = document.getElementById('navbar');
         const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
         const navMenu = document.querySelector('.nav-menu');
         const navLinks = document.querySelectorAll('.nav-link');
 
+        // Menu Toggle Handler (fixes mobile hamburger menu)
         if (menuToggle && navMenu) {
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
@@ -1370,13 +1338,13 @@
             });
         }
 
+        // Close menu when clicking a nav link (mobile)
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
+            link.addEventListener('click', () => navMenu.classList.remove('active'));
         });
 
+
+        // Scroll Handler - CSS filter handles logo appearance
         window.addEventListener('scroll', () => {
             const logo = document.getElementById('navbar-logo');
             if (window.scrollY > 50) {
@@ -1388,7 +1356,7 @@
             }
         });
 
-        // --- 5. FAQ Toggle ---
+        // FAQ Toggle
         document.querySelectorAll('.faq-mini-q').forEach(q => {
             q.addEventListener('click', () => {
                 const item = q.parentElement;
@@ -1396,16 +1364,14 @@
             });
         });
 
-        // --- 6. Hero Animation ---
-        if (typeof gsap !== 'undefined') {
-            gsap.from(".hero-content", {
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out",
-                delay: 0.2
-            });
-        }
+        // Hero Animation
+        gsap.from(".hero-content", {
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out",
+            delay: 0.2
+        });
     </script>
 
     <script type="application/ld+json">
@@ -1467,5 +1433,93 @@
       ]
     }
     </script>
+
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p style="margin: 0; color: #fff;">We use cookies to improve your experience, analyze traffic, and run advertising campaigns. You can accept or reject cookies. Read our <a href="/privacy-policy">Privacy Policy</a> for more details.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="acceptCookies" style="padding: 10px 20px; font-size: 14px; background-color: #FDB913; color: #0a1f17; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Accept All</button>
+            <button id="rejectCookies" style="padding: 10px 20px; font-size: 14px; background: transparent; color: #fff; border: 1px solid #fff; border-radius: 4px; cursor: pointer; margin-left: 10px;">Reject Non-Essential</button>
+        </div>
+    </div>
+
+    <style>
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0a1f17;
+            color: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        .cookie-content {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .cookie-content a {
+            color: #FDB913;
+            text-decoration: underline;
+        }
+        .cookie-buttons {
+            display: flex;
+            justify-content: center;
+        }
+        @media (min-width: 768px) {
+            .cookie-banner {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 20px 40px;
+            }
+            .cookie-content {
+                text-align: left;
+                margin-bottom: 0;
+                margin-right: 20px;
+                flex: 1;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookieConsentBanner");
+            const consent = localStorage.getItem("cookieConsent");
+
+            if (!consent) {
+                banner.style.display = "flex";
+            } else if (consent === "accepted") {
+                enableCookies();
+            }
+
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                localStorage.setItem("cookieConsent", "accepted");
+                banner.style.display = "none";
+                enableCookies();
+            });
+
+            document.getElementById("rejectCookies").addEventListener("click", function () {
+                localStorage.setItem("cookieConsent", "rejected");
+                banner.style.display = "none";
+            });
+
+            function enableCookies() {
+                window.analyticsCookiesEnabled = true;
+            }
+        });
+    </script>
 </body>
+
+
 </html>
