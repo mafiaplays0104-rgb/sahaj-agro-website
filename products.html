@@ -632,64 +632,143 @@
     <script src="products_scripts.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "CollectionPage",
+      "@id": "https://www.sahajagroindustries.com/products#webpage",
+      "url": "https://www.sahajagroindustries.com/products",
+      "name": "Bulk Urad Dal Manufacturer & Export Agricultural Products | Sahaj Agro Industries",
+      "description": "Leading Indian manufacturer and exporter of Whole Urad Dal, Split Urad Dal and Cattle Feed supplying bulk container loads to global importers, wholesalers and food processors.",
+      "inLanguage": "en",
+      "keywords": [
+        "Bulk Urad Dal Exporter",
+        "Urad Dal Manufacturer India",
+        "Split Urad Dal Supplier",
+        "Black Gram Exporter",
+        "Cattle Feed Manufacturer",
+        "Agricultural Commodities Export India"
+      ],
+      "isPartOf": {
+        "@id": "https://www.sahajagroindustries.com/#website"
+      },
+      "about": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.sahajagroindustries.com/products#catalog"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sahajagroindustries.com/products#breadcrumb",
+      "itemListElement": [
         {
-          "@type": "Organization",
-          "@id": "https://www.sahajagroindustries.com/#organization",
-          "name": "Sahaj Agro Industries",
-          "url": "https://www.sahajagroindustries.com/",
-          "logo": "https://www.sahajagroindustries.com/assets/icons/logo-primary.png",
-          "description": "Leading Urad Dal exporter in India & manufacturer in Chhattisgarh. Supplying bulk whole, split & black urad dal globally.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-7000205906",
-            "contactType": "sales",
-            "email": "sahajagroindustries0016@gmail.com",
-            "areaServed": "Worldwide",
-            "availableLanguage": ["English", "Hindi"]
-          },
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61586600987709",
-            "https://www.instagram.com/sahajagroindustries/",
-            "https://www.linkedin.com/in/sahaj-mourya-b5933b387/?originalSubdomain=in",
-            "https://www.youtube.com/@sahajagroindustries1"
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.sahajagroindustries.com/"
         },
         {
-          "@type": "WholesaleStore",
-          "@id": "https://www.sahajagroindustries.com/#localbusiness",
-          "name": "Sahaj Agro Industries - Global Export HQ",
-          "image": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bhatapara",
-            "addressRegion": "Chhattisgarh",
-            "addressCountry": "IN"
-          },
-          "telephone": "+91-7000205906",
-          "priceRange": "$$$",
-          "description": "Premium bulk urad dal manufacturer and international exporter.",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "124"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.sahajagroindustries.com/#website",
-          "url": "https://www.sahajagroindustries.com/",
-          "name": "Sahaj Agro Industries",
-          "publisher": {
-            "@id": "https://www.sahajagroindustries.com/#organization"
-          },
-          "inLanguage": "en"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://www.sahajagroindustries.com/products"
         }
       ]
+    },
+
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://www.sahajagroindustries.com/products#catalog",
+      "name": "Sahaj Agro Export Product Portfolio",
+      "description": "Industrial-scale agricultural commodities manufactured in India and exported worldwide.",
+      "seller": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "itemListElement": [
+
+        {
+          "@type": "Offer",
+          "businessFunction": "https://schema.org/Sell",
+          "eligibleRegion": {
+            "@type": "Place",
+            "name": "Worldwide"
+          },
+          "itemOffered": {
+            "@type": "Product",
+            "@id": "https://www.sahajagroindustries.com/products/urad-dal#product",
+            "name": "Whole Urad Dal (Black Gram)",
+            "category": "Pulses / Vigna Mungo / Black Gram",
+            "countryOfOrigin": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "manufacturer": {
+              "@id": "https://www.sahajagroindustries.com/#organization"
+            },
+            "url": "https://www.sahajagroindustries.com/products/urad-dal"
+          }
+        },
+
+        {
+          "@type": "Offer",
+          "businessFunction": "https://schema.org/Sell",
+          "eligibleRegion": {
+            "@type": "Place",
+            "name": "Worldwide"
+          },
+          "itemOffered": {
+            "@type": "Product",
+            "@id": "https://www.sahajagroindustries.com/products/urad-dal-split#product",
+            "name": "Split Urad Dal",
+            "category": "Split Pulses / Black Gram",
+            "countryOfOrigin": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "manufacturer": {
+              "@id": "https://www.sahajagroindustries.com/#organization"
+            },
+            "url": "https://www.sahajagroindustries.com/products/urad-dal-split"
+          }
+        },
+
+        {
+          "@type": "Offer",
+          "businessFunction": "https://schema.org/Sell",
+          "eligibleRegion": {
+            "@type": "Place",
+            "name": "Worldwide"
+          },
+          "itemOffered": {
+            "@type": "Product",
+            "@id": "https://www.sahajagroindustries.com/products/cattle-feed#product",
+            "name": "Cattle Feed",
+            "category": "Animal Feed / Livestock Nutrition",
+            "countryOfOrigin": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "manufacturer": {
+              "@id": "https://www.sahajagroindustries.com/#organization"
+            },
+            "url": "https://www.sahajagroindustries.com/products/cattle-feed"
+          }
+        }
+
+      ]
     }
-    </script>
+
+  ]
+}
+</script>
 
     <!-- Cookie Consent Banner -->
     <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
@@ -790,3 +869,4 @@
 
 
 </html>
+
