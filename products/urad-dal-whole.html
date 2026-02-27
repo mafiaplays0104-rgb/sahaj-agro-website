@@ -28,15 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
 
-    <!-- Schema: Breadcrumb -->
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.sahajagroindustries.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://www.sahajagroindustries.com/products"},{"@type":"ListItem","position":3,"name":"Urad Dal","item":"https://www.sahajagroindustries.com/products/urad-dal"}]}</script>
-    <!-- Schema: Product -->
-    <script
-        type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"Whole & Black Urad Dal","description":"Premium whole and black urad dal sourced from Chhattisgarh, India.","sku":"URD-W-BK-001","brand":{"@type":"Brand","name":"Sahaj Agro Industries"},"offers":{"@type":"AggregateOffer","priceCurrency":"USD","availability":"https://schema.org/InStock"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"124"}}</script>
-    <!-- Schema: FAQ -->
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the minimum order quantity for bulk urad dal?","acceptedAnswer":{"@type":"Answer","text":"1 Full Container Load (20ft FCL), roughly 24 Metric Tons."}},{"@type":"Question","name":"What packaging options are available for export?","acceptedAnswer":{"@type":"Answer","text":"25kg and 50kg PP woven bags with inner linings, plus 1MT Jumbo bags."}},{"@type":"Question","name":"How is urad dal cleaned before export?","acceptedAnswer":{"@type":"Answer","text":"4-stage Sortex cleaning, gravity separators, and magnetic destoners ensure 99.5% purity."}},{"@type":"Question","name":"Do you offer private labeling?","acceptedAnswer":{"@type":"Answer","text":"Yes, for qualifying order volumes."}}]}</script>
+   
 </head>
 
 <body>
@@ -1019,6 +1011,157 @@
 
     <script src="urad-dal-whole_scripts.js"></script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Product",
+      "@id": "https://www.sahajagroindustries.com/products/urad-dal#product",
+      "name": "Whole Urad Dal (Black Gram)",
+      "description": "Export-grade Whole Urad Dal (Vigna mungo) manufactured in India by Sahaj Agro Industries. High-protein, 99.5%+ purity, sortex-cleaned black gram supplied in bulk container loads to global importers, wholesalers and food processors.",
+      "image": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif",
+      "sku": "SAI-URD-WHOLE-001",
+      "brand": {
+        "@type": "Brand",
+        "name": "Sahaj Agro Industries"
+      },
+      "manufacturer": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "category": "Pulses / Black Gram / Vigna Mungo / Agricultural Commodities",
+      "countryOfOrigin": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "material": "Vigna mungo (Whole Black Gram)",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Purity",
+          "value": "99.5%+ Sortex Cleaned"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Moisture Content",
+          "value": "Max 11.8%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Broken Grains",
+          "value": "< 1%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Foreign Matter",
+          "value": "< 0.1%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Protein Content",
+          "value": "25–26g per 100g"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Packaging",
+          "value": "25kg, 50kg PP Woven Bags with Inner Liner, 1MT Jumbo Bags"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "MOQ",
+          "value": "1 x 20ft FCL (~24 Metric Tons)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Primary Applications",
+          "value": "Papad Manufacturing, Idli & Dosa Batter, Flour Milling, Snack Processing, Industrial Food Production"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.sahajagroindustries.com/contact",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "businessFunction": "https://schema.org/Sell",
+        "eligibleRegion": {
+          "@type": "Place",
+          "name": "Worldwide"
+        },
+        "seller": {
+          "@id": "https://www.sahajagroindustries.com/#organization"
+        }
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sahajagroindustries.com/products/urad-dal#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.sahajagroindustries.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://www.sahajagroindustries.com/products"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Whole Urad Dal",
+          "item": "https://www.sahajagroindustries.com/products/urad-dal"
+        }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sahajagroindustries.com/products/urad-dal#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the minimum order quantity for Whole Urad Dal export?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The minimum order quantity is one 20ft full container load, approximately 24 metric tons depending on packaging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What purity level do you guarantee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We guarantee 99.5%+ purity through multi-stage sortex cleaning, gravity separation and magnetic destoning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which countries do you export to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We export Whole Urad Dal globally to importers, wholesalers and food processing industries across Asia, Middle East and Europe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer private labeling and customized packaging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide private labeling and customized packaging options for bulk buyers and international retail chains."
+          }
+        }
+      ]
+    }
+
+  ]
+}
+</script>
+    
     <!-- Cookie Consent Banner -->
     <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
         <div class="cookie-content">
@@ -1115,6 +1258,7 @@
         });
     </script>
 </body>
+
 
 
 </html>
