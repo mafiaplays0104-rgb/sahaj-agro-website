@@ -427,64 +427,97 @@
     <script src="distribution_scripts.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebPage",
+      "@id": "https://www.sahajagroindustries.com/distribution#webpage",
+      "url": "https://www.sahajagroindustries.com/distribution",
+      "name": "Global Distribution Network | Sahaj Agro Industries",
+      "description": "International export distribution network of Sahaj Agro Industries supplying bulk Urad Dal and agricultural commodities to importers across Asia, Middle East and global markets.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.sahajagroindustries.com/#website"
+      },
+      "about": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sahajagroindustries.com/distribution#breadcrumb",
+      "itemListElement": [
         {
-          "@type": "Organization",
-          "@id": "https://www.sahajagroindustries.com/#organization",
-          "name": "Sahaj Agro Industries",
-          "url": "https://www.sahajagroindustries.com/",
-          "logo": "https://www.sahajagroindustries.com/assets/icons/logo-primary.png",
-          "description": "Leading Urad Dal exporter in India & manufacturer in Chhattisgarh. Supplying bulk whole, split & black urad dal globally.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-7000205906",
-            "contactType": "sales",
-            "email": "sahajagroindustries1@gmail.com",
-            "areaServed": "Worldwide",
-            "availableLanguage": ["English", "Hindi"]
-          },
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61586600987709",
-            "https://www.instagram.com/sahajagroindustries/",
-            "https://www.linkedin.com/in/sahaj-mourya-b5933b387/?originalSubdomain=in",
-            "https://www.youtube.com/@sahajagroindustries1"
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.sahajagroindustries.com/"
         },
         {
-          "@type": "WholesaleStore",
-          "@id": "https://www.sahajagroindustries.com/#localbusiness",
-          "name": "Sahaj Agro Industries - Global Export HQ",
-          "image": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bhatapara",
-            "addressRegion": "Chhattisgarh",
-            "addressCountry": "IN"
-          },
-          "telephone": "+91-7000205906",
-          "priceRange": "$$$",
-          "description": "Premium bulk urad dal manufacturer and international exporter.",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "124"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.sahajagroindustries.com/#website",
-          "url": "https://www.sahajagroindustries.com/",
-          "name": "Sahaj Agro Industries",
-          "publisher": {
-            "@id": "https://www.sahajagroindustries.com/#organization"
-          },
-          "inLanguage": "en"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Distribution",
+          "item": "https://www.sahajagroindustries.com/distribution"
         }
       ]
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://www.sahajagroindustries.com/distribution#exportservice",
+      "name": "Bulk Agricultural Export & Global Distribution",
+      "provider": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "description": "Container load export, international freight coordination, documentation handling and global bulk distribution of Whole Urad Dal, Split Urad Dal and agricultural commodities.",
+      "serviceType": "International Agricultural Commodity Distribution",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Middle East"
+        },
+        {
+          "@type": "Place",
+          "name": "South East Asia"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe"
+        },
+        {
+          "@type": "Place",
+          "name": "Worldwide"
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceLocation": {
+          "@type": "Place",
+          "name": "International Sea Ports & Freight Terminals"
+        },
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+91-7000205906",
+          "contactType": "Export Sales"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Export Product Catalog",
+        "url": "https://www.sahajagroindustries.com/products"
+      }
     }
-    </script>
+
+  ]
+}
+</script>
 
     <!-- Cookie Consent Banner -->
     <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
@@ -574,4 +607,5 @@
 
 
 </html>
+
 
