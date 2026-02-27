@@ -445,64 +445,134 @@
     <script src="process_scripts.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "AboutPage",
+      "@id": "https://www.sahajagroindustries.com/process#webpage",
+      "url": "https://www.sahajagroindustries.com/process",
+      "name": "Manufacturing & Export Process | Sahaj Agro Industries",
+      "description": "Industrial-scale processing infrastructure for Whole and Split Urad Dal at Sahaj Agro Industries, India. Multi-stage cleaning, sortex technology and export-grade quality control for global bulk supply.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.sahajagroindustries.com/#website"
+      },
+      "about": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sahajagroindustries.com/process#breadcrumb",
+      "itemListElement": [
         {
-          "@type": "Organization",
-          "@id": "https://www.sahajagroindustries.com/#organization",
-          "name": "Sahaj Agro Industries",
-          "url": "https://www.sahajagroindustries.com/",
-          "logo": "https://www.sahajagroindustries.com/assets/icons/logo-primary.png",
-          "description": "Leading Urad Dal exporter in India & manufacturer in Chhattisgarh. Supplying bulk whole, split & black urad dal globally.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-7000205906",
-            "contactType": "sales",
-            "email": "sahajagroindustries1@gmail.com",
-            "areaServed": "Worldwide",
-            "availableLanguage": ["English", "Hindi"]
-          },
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61586600987709",
-            "https://www.instagram.com/sahajagroindustries/",
-            "https://www.linkedin.com/in/sahaj-mourya-b5933b387/?originalSubdomain=in",
-            "https://www.youtube.com/@sahajagroindustries1"
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.sahajagroindustries.com/"
         },
         {
-          "@type": "WholesaleStore",
-          "@id": "https://www.sahajagroindustries.com/#localbusiness",
-          "name": "Sahaj Agro Industries - Global Export HQ",
-          "image": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bhatapara",
-            "addressRegion": "Chhattisgarh",
-            "addressCountry": "IN"
-          },
-          "telephone": "+91-7000205906",
-          "priceRange": "$$$",
-          "description": "Premium bulk urad dal manufacturer and international exporter.",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "124"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.sahajagroindustries.com/#website",
-          "url": "https://www.sahajagroindustries.com/",
-          "name": "Sahaj Agro Industries",
-          "publisher": {
-            "@id": "https://www.sahajagroindustries.com/#organization"
-          },
-          "inLanguage": "en"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Process",
+          "item": "https://www.sahajagroindustries.com/process"
         }
       ]
+    },
+
+    {
+      "@type": "HowTo",
+      "@id": "https://www.sahajagroindustries.com/process#manufacturing",
+      "name": "Industrial Processing of Urad Dal for Export",
+      "description": "Step-by-step industrial cleaning and processing of urad dal to achieve export-grade purity standards.",
+      "totalTime": "P7D",
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Raw Whole Black Gram (Vigna mungo)"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Vibratory Sieves"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Gravity Destoner"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Magnetic Separator"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "4-Stage Sortex Color Sorter"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Pre-Cleaning",
+          "text": "Removal of coarse impurities using industrial vibratory sieves and air aspiration systems."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Destoning",
+          "text": "Elimination of heavy foreign particles using gravity-based destoners."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Magnetic Separation",
+          "text": "Removal of metallic contaminants using high-intensity magnetic separators."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "4-Stage Sortex Cleaning",
+          "text": "Optical color sorting to remove discolored, damaged or defective grains ensuring 99.5%+ purity."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Automated Packing & Dispatch",
+          "text": "Precision weighing, hygienic bagging and container stuffing under export compliance protocols."
+        }
+      ]
+    },
+
+    {
+      "@type": "IndustrialEstablishment",
+      "@id": "https://www.sahajagroindustries.com/#facility",
+      "name": "Sahaj Agro Industries Processing Facility",
+      "parentOrganization": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bhatapara",
+        "addressRegion": "Chhattisgarh",
+        "addressCountry": "IN"
+      },
+      "description": "Industrial-scale agricultural processing facility specializing in urad dal milling, sortex cleaning and bulk export container loading.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      }
     }
-    </script>
+
+  ]
+}
+</script>
 
     <!-- Cookie Consent Banner -->
     <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
@@ -592,4 +662,5 @@
 
 
 </html>
+
 
