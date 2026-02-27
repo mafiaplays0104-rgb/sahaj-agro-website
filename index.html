@@ -793,64 +793,95 @@
     <script src="scripts.js" defer></script>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://www.sahajagroindustries.com/#organization",
-          "name": "Sahaj Agro Industries",
-          "url": "https://www.sahajagroindustries.com/",
-          "logo": "https://www.sahajagroindustries.com/assets/icons/logo-primary.png",
-          "description": "Leading Urad Dal exporter in India & manufacturer in Chhattisgarh. Supplying bulk whole, split & black urad dal globally.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-7000205906",
-            "contactType": "sales",
-            "email": "sahajagroindustries1@gmail.com",
-            "areaServed": "Worldwide",
-            "availableLanguage": ["English", "Hindi"]
-          },
-          "sameAs": [
-            "https://www.facebook.com/profile.php?id=61586600987709",
-            "https://www.instagram.com/sahajagroindustries/",
-            "https://www.linkedin.com/in/sahaj-mourya-b5933b387/?originalSubdomain=in",
-            "https://www.youtube.com/@sahajagroindustries1"
-          ]
-        },
-        {
-          "@type": "WholesaleStore",
-          "@id": "https://www.sahajagroindustries.com/#localbusiness",
-          "name": "Sahaj Agro Industries - Global Export HQ",
-          "image": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bhatapara",
-            "addressRegion": "Chhattisgarh",
-            "addressCountry": "IN"
-          },
-          "telephone": "+91-7000205906",
-          "priceRange": "$$$",
-          "description": "Premium bulk urad dal manufacturer and international exporter.",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "124"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.sahajagroindustries.com/#website",
-          "url": "https://www.sahajagroindustries.com/",
-          "name": "Sahaj Agro Industries",
-          "publisher": {
-            "@id": "https://www.sahajagroindustries.com/#organization"
-          },
-          "inLanguage": "en"
-        }
+      "@type": ["Organization","LocalBusiness"],
+      "@id": "https://www.sahajagroindustries.com/#organization",
+      "name": "Sahaj Agro Industries",
+      "url": "https://www.sahajagroindustries.com/",
+      "logo": "https://www.sahajagroindustries.com/assets/icons/logo-primary.png",
+      "image": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif",
+      "description": "Sahaj Agro Industries is a leading manufacturer and exporter of Whole Urad Dal, Split Urad Dal and agricultural commodities based in Chhattisgarh, India, supplying bulk container loads to global importers and food processors.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Chhattisgarh, India"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "knowsAbout": [
+        "Urad Dal Manufacturing",
+        "Black Gram Processing",
+        "Split Urad Dal Export",
+        "Agricultural Commodity Export",
+        "Bulk Pulses Supply",
+        "Sortex Cleaning Technology",
+        "Container Load Export Logistics"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bhatapara",
+        "addressRegion": "Chhattisgarh",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7000205906",
+        "contactType": "sales",
+        "email": "sahajagroindustries1@gmail.com",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["English","Hindi"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61586600987709",
+        "https://www.instagram.com/sahajagroindustries/",
+        "https://www.linkedin.com/in/sahaj-mourya-b5933b387/?originalSubdomain=in",
+        "https://www.youtube.com/@sahajagroindustries1"
       ]
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sahajagroindustries.com/#website",
+      "url": "https://www.sahajagroindustries.com/",
+      "name": "Sahaj Agro Industries",
+      "publisher": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.sahajagroindustries.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://www.sahajagroindustries.com/#webpage",
+      "url": "https://www.sahajagroindustries.com/",
+      "name": "Bulk Urad Dal Manufacturer & Exporter | Sahaj Agro Industries",
+      "description": "Premium export-grade Whole & Split Urad Dal manufacturer in India supplying global importers with bulk container loads.",
+      "isPartOf": {
+        "@id": "https://www.sahajagroindustries.com/#website"
+      },
+      "about": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.sahajagroindustries.com/assets/images/urad-whole-white.avif"
+      },
+      "inLanguage": "en"
     }
-    </script>
+
+  ]
+}
+</script>
 
     <!-- Cookie Consent Banner -->
     <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
@@ -940,4 +971,5 @@
 
 
 </html>
+
 
