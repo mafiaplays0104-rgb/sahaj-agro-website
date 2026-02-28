@@ -53,7 +53,155 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
 
-   
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.sahajagroindustries.com/#organization",
+      "name": "Sahaj Agro Industries",
+      "url": "https://www.sahajagroindustries.com/",
+      "logo": "https://www.sahajagroindustries.com/assets/images/logo.png"
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://www.sahajagroindustries.com/products/cattle-feed#product",
+      "name": "Export Grade Cattle Feed",
+      "alternateName": "High-Protein Livestock Feed Blend",
+      "description": "High-protein export-grade cattle feed manufactured in India by Sahaj Agro Industries. Designed for dairy farms, livestock operations, feedlots and agricultural distributors. Available in full container loads for international supply with consistent formulation and controlled nutritional standards.",
+      "image": "https://www.sahajagroindustries.com/assets/images/cattle-feed.avif",
+      "sku": "SAI-CF-GLOBAL",
+      "brand": {
+        "@type": "Brand",
+        "name": "Sahaj Agro Industries"
+      },
+      "manufacturer": {
+        "@id": "https://www.sahajagroindustries.com/#organization"
+      },
+      "countryOfOrigin": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "category": "Animal Feed / Livestock Nutrition / Agricultural Commodity",
+      "material": "Processed Agricultural Feed Blend",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Protein Content",
+          "value": "18% – 22% (Customizable)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Moisture Content",
+          "value": "Controlled as per export standards"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Packaging Options",
+          "value": "25kg and 50kg PP woven bags, containerized bulk supply"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Minimum Order Quantity",
+          "value": "1 x 20ft FCL (~24 Metric Tons)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Primary Applications",
+          "value": "Dairy Farms, Livestock Feedlots, Agricultural Distributors"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Supply Capability",
+          "value": "Full Container Load Export for International Markets"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.sahajagroindustries.com/contact",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "businessFunction": "https://schema.org/Sell",
+        "eligibleRegion": {
+          "@type": "Country",
+          "name": "Worldwide"
+        },
+        "seller": {
+          "@id": "https://www.sahajagroindustries.com/#organization"
+        }
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sahajagroindustries.com/products/cattle-feed#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.sahajagroindustries.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://www.sahajagroindustries.com/products"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cattle Feed",
+          "item": "https://www.sahajagroindustries.com/products/cattle-feed"
+        }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sahajagroindustries.com/products/cattle-feed#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the minimum export order for cattle feed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The minimum export quantity is one 20ft full container load, approximately 24 metric tons depending on packaging configuration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the protein level customizable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the protein percentage can be customized between 18% and 22% according to livestock nutritional requirements and buyer specifications."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide export documentation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide certificate of origin, quality analysis reports, and other compliance documentation required by destination countries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which regions do you export to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We export cattle feed globally to dairy farms, agricultural distributors and livestock operations across Asia, the Middle East, Africa and other international markets."
+          }
+        }
+      ]
+    }
+
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -1011,136 +1159,7 @@
 
     <script src="urad-dal-whole_scripts.js"></script>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-
-    {
-      "@type": "Product",
-      "@id": "https://www.sahajagroindustries.com/products/cattle-feed#product",
-      "name": "Export Grade Cattle Feed",
-      "description": "High-protein export-grade cattle feed manufactured in India by Sahaj Agro Industries. Designed for dairy farms, livestock operations and bulk agricultural distributors. Available in bulk container loads for international supply.",
-      "image": "https://www.sahajagroindustries.com/assets/images/cattle-feed.avif",
-      "sku": "SAI-CF-001",
-      "brand": {
-        "@type": "Brand",
-        "name": "Sahaj Agro Industries"
-      },
-      "manufacturer": {
-        "@id": "https://www.sahajagroindustries.com/#organization"
-      },
-      "category": "Animal Feed / Livestock Nutrition / Agricultural Commodities",
-      "countryOfOrigin": {
-        "@type": "Country",
-        "name": "India"
-      },
-      "material": "Processed agricultural feed blend",
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Protein Content",
-          "value": "18% - 22% (Customizable)"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Packaging",
-          "value": "25kg, 50kg PP Bags, Bulk Container Supply"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "MOQ",
-          "value": "1 x 20ft FCL (~24 MT)"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Application",
-          "value": "Dairy Farms, Livestock Feedlots, Agricultural Distributors"
-        }
-      ],
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.sahajagroindustries.com/contact",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "businessFunction": "https://schema.org/Sell",
-        "eligibleRegion": {
-          "@type": "Place",
-          "name": "Worldwide"
-        },
-        "seller": {
-          "@id": "https://www.sahajagroindustries.com/#organization"
-        }
-      }
-    },
-
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.sahajagroindustries.com/products/cattle-feed#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.sahajagroindustries.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://www.sahajagroindustries.com/products"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Cattle Feed",
-          "item": "https://www.sahajagroindustries.com/products/cattle-feed"
-        }
-      ]
-    },
-
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.sahajagroindustries.com/products/cattle-feed#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the minimum order quantity for cattle feed export?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The standard minimum order quantity is one 20ft full container load, approximately 24 metric tons depending on packaging configuration."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the protein level customizable?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, protein percentage can be customized according to livestock nutritional requirements and buyer specifications."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you provide export documentation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We provide complete export documentation including certificate of origin, quality analysis report and other compliance documents as required by destination countries."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which regions do you export to?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We export cattle feed globally to dairy farms, agricultural distributors and livestock operations across Asia, Middle East and other international markets."
-          }
-        }
-      ]
-    }
-
-  ]
-}
-</script>
+    
 
     <!-- Cookie Consent Banner -->
     <div id="cookieConsentBanner" class="cookie-banner" style="display: none;">
@@ -1243,5 +1262,6 @@
 
 
 </html>
+
 
 
