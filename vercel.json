@@ -1,31 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-
   "redirects": [
-
-    
-    {
-      "source": "https://sahajagroindustries.com/:path*",
-      "destination": "https://www.sahajagroindustries.com/:path*",
-      "permanent": true
-    },
-
-    
-    {
-      "source": "/:path*.html",
-      "destination": "/:path*",
-      "permanent": true
-    },
-
-   
-    {
-      "source": "/:path*/",
-      "destination": "/:path*",
-      "permanent": true
-    },
-
-   
     {
       "source": "/index.html",
       "destination": "/",
@@ -35,12 +11,14 @@
       "source": "/index",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/:path*.html",
+      "destination": "/:path*",
+      "permanent": true
     }
-
   ],
-
   "headers": [
-
     {
       "source": "/(.*)",
       "headers": [
@@ -62,8 +40,6 @@
         }
       ]
     },
-
-    
     {
       "source": "/assets/(.*)",
       "headers": [
@@ -73,8 +49,6 @@
         }
       ]
     },
-
-    
     {
       "source": "/(.*)",
       "headers": [
@@ -84,7 +58,5 @@
         }
       ]
     }
-
   ]
 }
-
