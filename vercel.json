@@ -4,28 +4,28 @@
 
   "redirects": [
 
-    /* Force WWW (important for authority consistency) */
+    
     {
       "source": "https://sahajagroindustries.com/:path*",
       "destination": "https://www.sahajagroindustries.com/:path*",
       "permanent": true
     },
 
-    /* Remove .html from all URLs */
+    
     {
       "source": "/:path*.html",
       "destination": "/:path*",
       "permanent": true
     },
 
-    /* Remove trailing slash */
+   
     {
       "source": "/:path*/",
       "destination": "/:path*",
       "permanent": true
     },
 
-    /* Redirect index variations */
+   
     {
       "source": "/index.html",
       "destination": "/",
@@ -63,7 +63,7 @@
       ]
     },
 
-    /* Cache static assets aggressively */
+    
     {
       "source": "/assets/(.*)",
       "headers": [
@@ -74,7 +74,7 @@
       ]
     },
 
-    /* HTML pages should revalidate */
+    
     {
       "source": "/(.*)",
       "headers": [
@@ -87,3 +87,4 @@
 
   ]
 }
+
