@@ -3844,3 +3844,177 @@ h4 {
 .pr-5 {
     padding-right: 3rem !important;
 }
+
+
+/* ========================================== */
+/* RECIPE CORNER CTA SECTION STYLES           */
+/* ========================================== */
+
+.final-cta-section {
+    padding: 5rem 0;
+    background-color: #fdfdfc; /* Subtle, clean background */
+    overflow: hidden; /* Prevents horizontal scrollbars */
+}
+
+.cta-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Content Block (Left Side) --- */
+.cta-content-block {
+    flex: 0 0 40%;
+}
+
+.cta-eyebrow {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #e65c00; /* Warm agro color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.cta-headline {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.cta-subtext {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.btn-cta-explore {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: #e65c00;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(230, 92, 0, 0.2);
+}
+
+.btn-cta-explore:hover {
+    background-color: #cc5200;
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(230, 92, 0, 0.3);
+}
+
+/* --- Marquee Block (Right Side) --- */
+.cta-marquee-block {
+    flex: 0 0 60%;
+    overflow: hidden;
+    position: relative;
+    /* Creates a slight fade-out effect on the left and right edges */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    /* 100% moves the whole track, 50% moves exactly halfway (1 set of items) for a perfect loop */
+    animation: scrollMarquee 40s linear infinite;
+}
+
+/* Pause the scrolling when a user hovers over the recipes */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    position: relative;
+    width: 200px;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.marquee-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.marquee-item:hover img {
+    transform: scale(1.1);
+}
+
+.marquee-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 1rem 1rem;
+    /* Dark gradient to ensure white text is readable over any image */
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.125rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Animation --- */
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .cta-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-content-block, 
+    .cta-marquee-block {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+    
+    .cta-marquee-block {
+        margin-top: 2rem;
+        /* Increase mask transparency area on mobile so edges blend smoother */
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+    
+    .cta-headline {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .marquee-item {
+        width: 160px;
+        height: 220px;
+    }
+    .cta-headline {
+        font-size: 1.75rem;
+    }
+}
